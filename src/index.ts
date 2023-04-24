@@ -7,4 +7,3 @@ const server = app.listen(PORT, () => console.log(
 ));
 
 export default server;
-// starting project => Trybesmith
