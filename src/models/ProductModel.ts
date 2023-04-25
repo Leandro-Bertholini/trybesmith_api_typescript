@@ -12,8 +12,14 @@ async function createProduct(product: IProduct): Promise<IProduct> {
   const [result] = await connection.execute<ResultSetHeader>(query, values);
   const { insertId: id } = result;
 
-  const newProduct: IProduct = { id, name, amount };
+  const newProduct = { 
+    id,
+    name, 
+    amount,
+  };
+  console.log('console do retorno:', newProduct);
   return newProduct; 
+  
 }
 
 export default {
