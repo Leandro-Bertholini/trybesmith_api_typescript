@@ -9,6 +9,13 @@ async function createProduct(req: Request, res: Response) {
   res.status(type).json(insertedProduct);
 }
 
+async function getAll(_req: Request, res: Response) {
+  const { type, allProducts } = await productService.getAll();
+
+  res.status(type).json(allProducts);
+}
+
 export default {
   createProduct,
+  getAll,
 };
