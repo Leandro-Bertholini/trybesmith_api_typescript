@@ -19,7 +19,6 @@ async function createProduct(product: IProduct): Promise<IProduct> {
   };
   console.log('console do retorno:', newProduct);
   return newProduct; 
-  
 }
 
 export default {
