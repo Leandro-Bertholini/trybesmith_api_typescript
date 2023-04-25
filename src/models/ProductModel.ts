@@ -17,7 +17,9 @@ async function createProduct(product: IProduct): Promise<IProduct> {
 
 async function getAll(): Promise<IProduct[]> {
   const query = 'SELECT * FROM Trybesmith.products';
+
   const [allProducts] = await connection.execute(query);
+  // console.log('retorno da query;', allProducts);
 
   return allProducts as IProduct[];
 }

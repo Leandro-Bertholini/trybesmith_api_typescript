@@ -7,7 +7,7 @@ async function createProduct(product: IProduct) {
 }
 
 async function getAll() {
-  const [allProducts] = await ProductModel.getAll();
+  const allProducts = await ProductModel.getAll();
   return { type: 200, allProducts };
 }
 
