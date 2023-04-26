@@ -1,7 +1,7 @@
-import OrderModels from '../models/OrderModels';
+import OrderModel from '../models/OrderModel';
 
 async function getAll() {
-  const listOfServices = await OrderModels.getAll();
+  const listOfServices = await OrderModel.getAll();
   
   return { type: 200, data: listOfServices };
 }
