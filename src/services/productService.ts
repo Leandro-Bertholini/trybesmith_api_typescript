@@ -1,7 +1,7 @@
 import ProductModel from '../models/ProductModel';
-import { IProduct } from '../interfaces/IProduct';
+import { Product } from '../types/Product';
 
-async function createProduct(product: IProduct) {
+async function createProduct(product: Product) {
   const insertedProduct = await ProductModel.createProduct(product);
   return { type: 201, data: insertedProduct };
 }

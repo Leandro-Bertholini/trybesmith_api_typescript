@@ -1,9 +1,9 @@
 import { Request, Response } from 'express';
 import productService from '../services/productService';
-import { IProduct } from '../interfaces/IProduct';
+import { Product } from '../types/Product';
 
 async function createProduct(req: Request, res: Response) {
-  const product = req.body as IProduct;
+  const product = req.body as Product;
 
   const { type, data } = await productService.createProduct(product);
   res.status(type).json(data);

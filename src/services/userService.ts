@@ -1,4 +1,3 @@
-// import { IUser } from '../interfaces/IUser';
 import userModel from '../models/UserModel';
 import generateToken from '../authToken/JWT';
 
