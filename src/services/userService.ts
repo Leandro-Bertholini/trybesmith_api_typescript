@@ -10,7 +10,7 @@ async function createUser(
   const newUser = await userModel.createUser(username, vocation, level, password);
   
   const token = generateToken(newUser);
-  return { type: 201, data: { token } };
+  return { status: 201, data: { token } };
 }
 
 export default {

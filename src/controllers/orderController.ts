@@ -2,9 +2,9 @@ import { Request, Response } from 'express';
 import orderService from '../services/orderService';
 
 async function getAll(_req: Request, res: Response) {
-  const { type, data } = await orderService.getAll();
+  const { status, data } = await orderService.getAll();
 
-  res.status(type).json(data);
+  res.status(status).json(data);
 }
 
 export default {

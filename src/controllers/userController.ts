@@ -5,8 +5,8 @@ import { User } from '../types/User';
 async function createUser(req:Request, res: Response) {
   const { username, vocation, level, password } = req.body as User;
   
-  const { type, data } = await userService.createUser(username, vocation, level, password);
-  res.status(type).json(data);
+  const { status, data } = await userService.createUser(username, vocation, level, password);
+  res.status(status).json(data);
 }
 export default {
   createUser,

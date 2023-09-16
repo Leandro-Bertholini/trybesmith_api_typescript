@@ -5,14 +5,14 @@ import { Product } from '../types/Product';
 async function createProduct(req: Request, res: Response) {
   const product = req.body as Product;
 
-  const { type, data } = await productService.createProduct(product);
-  res.status(type).json(data);
+  const { status, data } = await productService.createProduct(product);
+  res.status(status).json(data);
 }
 
 async function getAll(_req: Request, res: Response) {
-  const { type, data } = await productService.getAll();
+  const { status, data } = await productService.getAll();
 
-  res.status(type).json(data);
+  res.status(status).json(data);
 }
 
 export default {
