@@ -29,7 +29,7 @@ Não houve front-end neste projeto, portanto não se preocupe com a visualizaç�
 
 O banco de dados segue a estrutura abaixo:
 
-<img src="images/figuraBd.png" height="200px" />
+<img src="images/imagemDb.png" height="350px" />
 </details>
 
 <details>
